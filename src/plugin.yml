@@ -1,0 +1,31 @@
+name: PigInstance
+main: com.xzzpig.piginstance.Main
+version: V0.1
+author: xzzpig
+depend:
+- PigAPI
+commands:
+  piginstance:
+    description: PigInstance的主命令
+    usage: /piginstance help
+    aliases:
+    - pi
+permission:
+  piginstance.*: 
+    description: PigInstance的所有权限
+    default: op
+    children: 
+      piginstance.command.*: true
+  piginstance.command.*: 
+    description: PigInstance的所有命令权限
+    default: op
+    children: 
+      piginstance.command.ins.*: true
+  piginstance.command.ins.*: 
+    description: /pi ins *的命令权限
+    default: op
+    children: 
+      piginstance.command.ins.create: true
+  piginstance.command.ins.create: 
+    description: /pi ins create的命令权限
+    default: op
