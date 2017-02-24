@@ -12,24 +12,32 @@ public class Help {
 	public static TCommandHelp pi_ins = _PigInstance.addSubCommandHelp("ins", "管理副本区域", "/pi ins help", "");
 	public static TCommandHelp pi_ins_add = pi_ins
 			.addSubCommandHelp("add", "将选定的区域加入副本区域", "/pi ins add [name]", "[name]")
-			.setCommandRunner(CommandRunners::pi_ins_add).addLimit(TCommandHelp.isPlayer);
+			.setCommandRunner(CommandRunners::pi_ins_add).addLimit(TCommandHelp.isPlayer)
+			.setPermission("piginstance.command.ins.add");
 	public static TCommandHelp pi_ins_create = pi_ins
 			.addSubCommandHelp("create", "创建新的副本区域", "/pi ins create [name]", "[name]")
-			.setCommandRunner(CommandRunners::pi_ins_create).setPermission("piginstance.command.ins.create");
+			.setCommandRunner(CommandRunners::pi_ins_create)
+			.setPermission("piginstance.command.ins.create");
 	public static TCommandHelp pi_ins_delete = pi_ins
 			.addSubCommandHelp("delete", "删除副本区域", "/pi ins delete [name]", "[name]")
-			.setCommandRunner(CommandRunners::pi_ins_delete);
+			.setCommandRunner(CommandRunners::pi_ins_delete)
+			.setPermission("piginstance.command.ins.delete");
 	public static TCommandHelp pi_ins_except = pi_ins
 			.addSubCommandHelp("except", "将选定的区域排除副本区域", "/pi ins except [name]", "[name]")
-			.setCommandRunner(CommandRunners::pi_ins_except).addLimit(TCommandHelp.isPlayer);
+			.setCommandRunner(CommandRunners::pi_ins_except).addLimit(TCommandHelp.isPlayer)
+			.setPermission("piginstance.command.ins.except");
 	public static TCommandHelp pi_ins_info = pi_ins.addSubCommandHelp("info", "获取副本区域信息", "/pi ins info", "[name]")
-			.setCommandRunner(CommandRunners::pi_ins_info);
+			.setCommandRunner(CommandRunners::pi_ins_info)
+			.setPermission("piginstance.command.ins.info");
 	public static TCommandHelp pi_ins_list = pi_ins.addSubCommandHelp("list", "列出所在的副本区域", "/pi ins list", null)
-			.setCommandRunner(CommandRunners::pi_ins_list).addLimit(TCommandHelp.isPlayer);
+			.setCommandRunner(CommandRunners::pi_ins_list).addLimit(TCommandHelp.isPlayer)
+			.setPermission("piginstance.command.ins.list");
 	public static TCommandHelp pi_ins_listall = pi_ins
 			.addSubCommandHelp("listall", "列出所有的副本区域", "/pi ins listall", null)
-			.setCommandRunner(CommandRunners::pi_ins_listall);
+			.setCommandRunner(CommandRunners::pi_ins_listall)
+			.setPermission("piginstance.command.ins.listall");
 	public static TCommandHelp pi_ins_image = pi_ins
 			.addSubCommandHelp("image", "将副本区域输出为简单图片", "/pi ins image [name]", "[name]")
-			.setCommandRunner(CommandRunners::pi_ins_image);
+			.setCommandRunner(CommandRunners::pi_ins_image)
+			.setPermission("piginstance.command.ins.image");
 }

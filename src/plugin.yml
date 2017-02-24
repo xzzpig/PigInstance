@@ -25,7 +25,35 @@ permission:
     description: /pi ins *的命令权限
     default: op
     children: 
+      piginstance.command.ins.add: true
       piginstance.command.ins.create: true
+      piginstance.command.ins.delete: true
+      piginstance.command.ins.except: true
+      piginstance.command.ins.info: true
+      piginstance.command.ins.list: true
+      piginstance.command.ins.listall: true
+      piginstance.command.ins.image: true
+  piginstance.command.ins.add: 
+    description: /pi ins add的命令权限
+    default: op
   piginstance.command.ins.create: 
     description: /pi ins create的命令权限
+    default: op
+  piginstance.command.ins.delete: 
+    description: /pi ins delete的命令权限
+    default: op
+  piginstance.command.ins.except: 
+    description: /pi ins except的命令权限
+    default: op
+  piginstance.command.ins.info: 
+    description: /pi ins info的命令权限
+    default: op
+  piginstance.command.ins.list: 
+    description: /pi ins list的命令权限
+    default: op
+  piginstance.command.ins.listall: 
+    description: /pi ins listall的命令权限
+    default: op
+  piginstance.command.ins.image: 
+    description: /pi ins image的命令权限
     default: op
